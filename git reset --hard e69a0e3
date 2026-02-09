@@ -1,0 +1,39 @@
+[33m16aee54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mriscv[m[33m, [m[1;31morigin/riscv[m[33m)[m Lab 3
+[33me69a0e3[m Lab 2
+[33m5474d4b[m[33m ([m[1;31mupstream/riscv[m[33m, [m[1;31mupstream/HEAD[m[33m)[m Makefile: discover riscv64-none-elf- toolchain (#439)
+[33me90b257[m explicitly specify -march=rv64gc
+[33mdf440e2[m slightly clearer comments, for next year
+[33mc71a6c4[m ensure sbrk cannot exceed TRAPFRAME
+[33m8402fc9[m add a test for sbrk approaching MAXVA
+[33m4689d66[m fix piperead() with lazy sbrk
+[33mffdff7c[m Replace stale comment with old comment, after lazy-page allocation changes
+[33mc14b639[m pass -Wno-unknown-attributes for mkfs too
+[33m9dbd536[m Update comment
+[33m996f6ee[m fix start() args
+[33mc6a6eaa[m fix user printf for uint64
+[33m4f1bdde[m try again to fix the dirent name strncpy warning
+[33md366b51[m propagate main return value to exit status
+[33m7d7adbb[m[33m ([m[1;33mtag: [m[1;33mxv6-riscv-rev5[m[33m)[m Add DOC: for reference in book
+[33m2ce32bd[m PR 383
+[33m0bb6995[m null-terminate fmtname() result
+[33mf5dea58[m user sleep() -> pause() kernel sys_sleep() -> sys_pause() kernel fork() -> kfork() kernel exec() -> kexec() kernel wait() -> kwait() kernel exit() -> kexit() kernel kill() -> kkill() SYS_sleep -> SYS_pause
+[33m9374395[m Use mem instead of ka
+[33ma843829[m uart tx code better suited to the sleep/wakeup lecture.
+[33m6d2592a[m Clean up sbrk error handling
+[33m11362fe[m Make generation of syscall stub ready for prefix
+[33m4dfca4a[m 4096 -> PGSIZE
+[33m4a92b85[m Add a flag to the sbrk system call indicating eager or lazy allocation
+[33m79fa703[m x
+[33m5f2fbe1[m Merge branch 'riscv-crash' into riscv
+[33m36a255c[m more precise tracking of block space in log
+[33m707a9f7[m Rename to use lazy instead of sparse
+[33m3d815fc[m x
+[33m2f69c72[m Add sbrkalloc to capture a test pattern that forces allocation
+[33mf61e51d[m nits
+[33m1a8645f[m move a few vm.c functions to match book's flow a bit better
+[33m2e5f272[m qhuo
+[33mab958d7[m Revert "Document that name in dirent may not be a null-terminated string."
+[33m33844c1[m Make %u, %x, and %c unsigned
+[33mb715361[m Kill #if 0 here too
+[33m2134b23[m Support running usertests from test script Support regex to specify which tests to run
+[33m2295a9d[m Try test_log a few times before failing the test
