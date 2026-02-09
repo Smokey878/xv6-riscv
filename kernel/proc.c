@@ -688,3 +688,32 @@ procdump(void)
     printf("\n");
   }
 }
+
+int
+kps(char *arguments)
+{
+  struct proc *p;
+
+  // "-o" : Output only process names
+  if (strncmp(arguments, "-o", 2) == 0) {
+    for (p = proc; p < &proc[NPROC]; p++) {
+      if (p->state != UNUSED) {
+        printf("%s\n", p->name);
+      }
+    }
+  }
+  // "-l" : Output detailed list (PID, state, name)
+  else if (strncmp(arguments, "-l", 2) == 0) {
+    for (p = proc; p < &proc[NPROC]; p++) {
+      if (p->state != UNUSED) {
+        printf("%d %d %s\n", p->pid, p->state, p->name);
+      }
+    }
+  }
+  // invalid argument
+  else {
+    printf("Usage: ps [-o | -l]\n");
+  }
+
+  return 0;
+}

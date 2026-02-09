@@ -107,3 +107,14 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_kps(void)
+{
+  char buf[4];
+
+  if (argstr(0, buf, sizeof(buf)) < 0)
+    return -1;
+
+  return kps(buf);
+}
