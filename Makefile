@@ -147,6 +147,7 @@ UPROGS=\
 	$U/_dorphan\
 	$U/_hello_world\
 	$U/_ps\
+	$U/_bad_pipe\
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
